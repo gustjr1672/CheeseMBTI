@@ -1,5 +1,17 @@
+import { useEffect } from "react";
+import { useNavigate  } from "react-router-dom";
 import styled from "styled-components"
-function Loding(){
+
+function Loding({answers}){
+    const navigate = useNavigate(); // useNavigate 선언
+    useEffect(()=>{
+      const timer = setTimeout(() => {
+        console.log({answers});
+        navigate('/result',{state:{answers}}); // 3초 후에 '/result' 경로로 이동합니다.
+      }, 2000);
+
+      return () => clearTimeout(timer);
+    },[])
     return(
         <>
         <TotalCSS>
@@ -13,6 +25,7 @@ function Loding(){
                     <div className="panShadow"></div>
                 </div>
             </div>
+            <h3>결과를 확인 중 입니다.</h3>
         </TotalCSS>
         </>
     )
@@ -21,6 +34,8 @@ function Loding(){
 export default Loding;
 
 const TotalCSS = styled.div`
+display:flex;
+flex-direction:column;
 .loader {
     display: flex;
     align-items: center;
