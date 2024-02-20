@@ -1,9 +1,8 @@
 import { useState } from "react";
 import styled from "styled-components";
-
-function Question({question, options, addAnswer, deleteAnswer}){
+function Question({question, options, imgPath, addAnswer, deleteAnswer}){
     const [selectedOption, setSelectedOption] = useState('');
-
+    
     const handleNextQuestion = () =>{
         setSelectedOption('');
         if(selectedOption === '0'){
@@ -15,6 +14,7 @@ function Question({question, options, addAnswer, deleteAnswer}){
     }
 
     const handelBeforeQuestion = ()=>{
+        setSelectedOption('');
         deleteAnswer();
     }
 
@@ -24,28 +24,36 @@ function Question({question, options, addAnswer, deleteAnswer}){
 
     return(
         <>
-            <h2>{question.question}</h2>
-            <Container>
-                <form>
-                    {options.map((option,index)=>(
-                        <RadioButtonContainer key={index} >
-                                <input
-                                type="radio"
-                                id={`option-${index}`}
-                                name="option"
-                                value={index}
-                                checked={selectedOption===`${index}`}
-                                onChange={handleOptionChange}
-                                />
-                                <RadioTitle>
-                                    <label htmlFor={`option-${index}`}> {option} </label>       
-                                </RadioTitle>                 
-                        </RadioButtonContainer>
-                    ))}
-                </form>
-            </Container>
-            <button onClick={handelBeforeQuestion}>이전</button>
-            <button onClick={handleNextQuestion}>다음</button>
+        <Container>
+            <h2>
+                {question.question}
+            </h2>
+            <form>
+                {options.map((option,index)=>(
+                    <RadioButtonContainer key={index} >
+                            <input
+                            type="radio"
+                            id={`option-${index}`}
+                            name="option"
+                            value={index}
+                            checked={selectedOption===`${index}`}
+                            onChange={handleOptionChange}
+                            />
+                            
+                            <RadioTitle>
+                                <label htmlFor={`option-${index}`}> {option} </label>
+                                <img src={imgPath[index]} alt={`Image ${index}`} /> 
+                            </RadioTitle>           
+                    </RadioButtonContainer>
+                ))}
+            </form>
+
+        <Buttons>
+            <Button onClick={handelBeforeQuestion}>이전</Button>
+            <Button onClick={handleNextQuestion}>다음</Button>
+        </Buttons>
+        
+        </Container>
         </>
     )
 }
@@ -54,26 +62,30 @@ export default Question;
 
 
 const Container = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display:flex;
     flex-direction: column;
-
-    width: 80vw;
-    height: 30vh;
-    margin: 0;
+    align-items: center;
+    gap: 30px;
+    margin: 3em 0;
+    h2{
+        min-width:250px;
+        min-height: 80px;
+    }
     form{
-        margin-top: 20px;
+        margin-top: 0px;
         display: flex;
+        justify-content: center;
+        
         @media screen and (max-width: 768px) {
             /* 모바일 환경에서의 스타일 */
             flex-direction: column;
+            gap:50px;
           }
         
           @media screen and (min-width: 769px) {
             /* 웹 환경에서의 스타일 */
             flex-direction: row;
-            max-width: 
+            gap: 170px;
           }
         align-items: center;
         width: 100%;
@@ -81,20 +93,39 @@ const Container = styled.div`
     }
 `
 const RadioTitle = styled.div`
-    text-aline:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     border: 2px solid #ab9a5b59;
-    border-radius: 5px;
-    padding: 1rem;
     transition: transform 150ms ease;
-    border-radius: 0.4em;
+    
+    width:100%;
+    height:100%;
+    img{
+        object-fit: fill;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            height: 170px;
+          
+          }
+        
+          @media screen and (min-width: 769px) {
+            width: 200px;
+            height: 200px;
+          }
+    }
 `
 
 const RadioButtonContainer = styled.div`
+    display:flex;
     position: relative;
-    height: 20%;
+    height: 60%;
     width: 60%;
-    // max-width: 60%;
-    margin: 0.5rem;
+    min-width: 190px;
+    min-height:190px;
+    max-width: 200px;
+    max-height: 200px;
 
     input[type="radio"]{
         opacity: 0;
@@ -108,23 +139,60 @@ const RadioButtonContainer = styled.div`
 
         &:checked + ${RadioTitle} {
             background-color: #ffe072;
-            border: 2px solid #ab9a5b59;
-            color: #4953ff;
+
             transform: scale(1.04, 1.04);
             
         }
         &:checked + ${RadioTitle} label{
-            color: #4953ff;
             background-color: #ffe072;  
         }
     }
 
     label{
         text-align: center;
-        font-size: 0.8rem;
+        font-size: 1.2rem;
         font-weight: 600;
-        // text-transform: uppercase;
         letter-spacing: 1px;
-        color: #4953ff;
     }
 `
+
+const Buttons = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    @media screen and (max-width: 768px) {
+        gap: 18%;
+        margin-top:50px;
+      }
+    
+      @media screen and (min-width: 769px) {
+        margin-top:30px;
+        gap: 254px;
+      }
+  
+`
+const Button = styled.button`
+    width: 10%;
+    min-width: 120px;
+    background: #fff6d5;
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 18px;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    cursor: pointer;
+    &:hover{
+        transform: translate(-0.05em, -0.05em);
+        box-shadow: 0.15em 0.15em;
+    }
+    &:active{
+        transform: translate(0.05em, 0.05em);
+        box-shadow: 0.05em 0.05em;
+    }
+    a{
+        color: #646cff
+    }
+`;
