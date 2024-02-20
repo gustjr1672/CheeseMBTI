@@ -23,6 +23,9 @@ function Result(){
     }
 
     useEffect(()=>{ 
+        answers.forEach(answer => {
+            answerCounts[answer]++;
+        });    
         const result = [
             answerCounts['E'] > answerCounts['I'] ? 'E' : 'I',
             answerCounts['S'] > answerCounts['N'] ? 'S' : 'N',
