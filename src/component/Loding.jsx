@@ -3,11 +3,11 @@ import { useNavigate  } from "react-router-dom";
 import styled from "styled-components"
 
 function Loding({answers,resultList}){
-    const navigate = useNavigate(); // useNavigate 선언
+    const navigate = useNavigate();
     useEffect(()=>{
       const timer = setTimeout(() => {
-        navigate('/result',{state:{answers,resultList}}); // 3초 후에 '/result' 경로로 이동합니다.
-      }, 2500);
+        navigate('/result',{state:{answers,resultList}}); 
+      }, 3000);
 
       return () => clearTimeout(timer);
     },[])

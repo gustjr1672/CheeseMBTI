@@ -66,7 +66,6 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    margin: 3em 0;
     h2{
         min-width:250px;
         min-height: 80px;
@@ -163,11 +162,11 @@ const Buttons = styled.div`
     
     @media screen and (max-width: 768px) {
         gap: 18%;
-        margin-top:50px;
+        margin-top:20px;
       }
     
       @media screen and (min-width: 769px) {
-        margin-top:30px;
+        margin-top:60px;
         gap: 254px;
       }
   
