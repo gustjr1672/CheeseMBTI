@@ -6,7 +6,7 @@ function StartPage(){
     return(
         <>
         <Center>
-            <h1>한국인의 <br/><span>음식 밸런스</span> 게임</h1>
+            <h1>한국인의<span><br/> 밥상 만들기 </span></h1>
             {/* <img src="/image/main.png"/> */}
             <TestLink to="./test">테스트 시작하기</TestLink>
         </Center>
