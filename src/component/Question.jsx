@@ -65,7 +65,7 @@ const Container = styled.div`
     display:flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 15px;
     h2{
         min-width:250px;
         min-height: 80px;
@@ -106,13 +106,12 @@ const RadioTitle = styled.div`
         @media screen and (max-width: 768px) {
             width: 100%;
             height: 170px;
-          
-          }
+        }
         
-          @media screen and (min-width: 769px) {
+        @media screen and (min-width: 769px) {
             width: 200px;
             height: 200px;
-          }
+        }
     }
 `
 
@@ -123,8 +122,8 @@ const RadioButtonContainer = styled.div`
     width: 60%;
     min-width: 190px;
     min-height:190px;
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 202px;
+    max-height: 250px;
 
     input[type="radio"]{
         opacity: 0;
@@ -137,21 +136,22 @@ const RadioButtonContainer = styled.div`
         cursor: pointer;
 
         &:checked + ${RadioTitle} {
-            background-color: #ffe072;
-
+            // background-color: #ffe072;
             transform: scale(1.04, 1.04);
             
         }
         &:checked + ${RadioTitle} label{
-            background-color: #ffe072;  
+            background-color: #fff3a2;  
         }
     }
 
     label{
         text-align: center;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         font-weight: 600;
         letter-spacing: 1px;
+        width: 100%;
+        border-bottom: solid 1px #3333337a;
     }
 `
 
@@ -162,7 +162,7 @@ const Buttons = styled.div`
     
     @media screen and (max-width: 768px) {
         gap: 18%;
-        margin-top:20px;
+        margin-top:50px;
       }
     
       @media screen and (min-width: 769px) {

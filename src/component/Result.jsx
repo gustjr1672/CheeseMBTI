@@ -12,7 +12,7 @@ function Result(){
     const [result,setResult] = useState('');
     const [parts,setParts] = useState([]);
 
-    const highlightedWords = ['간장', '고추장', '얼큰한', '구수한', '고기파', '생선파'];
+    const highlightedWords = ['간장', '고추장', '얼큰한', '깔끔한', '고기파', '생선파'];
     const answerCounts = {
         E:0,
         I:0,
@@ -49,11 +49,9 @@ function Result(){
         <>
          <StyleSheetManager shouldForwardProp={(prop) => prop !== 'ishighlighted'}>
             <Container>
-            <ResultImage src={resultImg}/>
-            <div>
-                {result}
-            </div>
+            <ResultImage src={resultImg}/><br/><br/>
 
+       
         {parts.map((phrase, index) => (
             <div key={index}>
                 {phrase.split(' ').map((word, idx) => (
@@ -91,6 +89,6 @@ const ResultImage = styled.img`
 `
 
 const StyledSpan = styled.span`
-    color: ${({ ishighlighted }) => ishighlighted ? '#F44336' : 'black'};
-    font-size: ${({ ishighlighted }) => ishighlighted ? '30px' : '20px'};
+    color: ${({ ishighlighted }) => ishighlighted ? '#ff594d' : '#2d2d2d'};
+    font-size: ${({ ishighlighted }) => ishighlighted ? '33px' : '25px'};
 `
