@@ -1,39 +1,39 @@
 export const optionList = [
     {
         options: ['김치찌개', '된장찌개'],
-        imgPath: ['/image/김치찌개.png' , '/image/된장찌개.png']
+        imgPath: ['https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EA%B9%80%EC%B9%98%EC%B0%8C%EA%B0%9C.png' , 'https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EB%90%9C%EC%9E%A5%EC%B0%8C%EA%B0%9C.png']
     },
     {
         options: ['고등어무조림', '짜글이'],
-        imgPath: ['/image/고등어무조림.png' , '/image/짜글이.png']
+        imgPath: ['https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EA%B3%A0%EB%93%B1%EC%96%B4%EB%AC%B4%EC%A1%B0%EB%A6%BC.png' , 'https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EC%A7%9C%EA%B8%80%EC%9D%B4.png']
     },
     {
         options: ['라면', '칼국수'],
-        imgPath: ['/image/라면.png' , '/image/칼국수.png']
+        imgPath: ['https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EB%9D%BC%EB%A9%B4.png' , 'https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EC%B9%BC%EA%B5%AD%EC%88%98.png']
     },
     {
         options: ['민어전', '동그랑땡'],
-        imgPath: ['/image/민어전.png' , '/image/동그랑땡.png']
+        imgPath: ['https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EB%AF%BC%EC%96%B4%EC%A0%84.png' , 'https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EB%8F%99%EA%B7%B8%EB%9E%91%EB%95%A1.png']
     },
     {
         options: ['고등어회', '흑돼지구이'],
-        imgPath: ['/image/고등어회.png' , '/image/흑돼지구이.png']
+        imgPath: ['https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EA%B3%A0%EB%93%B1%EC%96%B4%ED%9A%8C.png' , 'https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%ED%9D%91%EB%8F%BC%EC%A7%80%EA%B5%AC%EC%9D%B4.png']
     },
     {
         options: ['불고기', '제육볶음'],
-        imgPath: ['/image/불고기.png' , '/image/제육볶음.png']
+        imgPath: ['https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EB%B6%88%EA%B3%A0%EA%B8%B0.png' , 'https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EC%A0%9C%EC%9C%A1%EB%B3%B6%EC%9D%8C.png']
     },
     {
         options: ['간장게장.', '양념게장'],
-        imgPath: ['/image/간장게장.png' , '/image/양념게장.png']
+        imgPath: ['https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EA%B0%84%EC%9E%A5%EA%B2%8C%EC%9E%A5.png' , 'https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EC%96%91%EB%85%90%EA%B2%8C%EC%9E%A5.png']
     },
     {
         options: ['나베전골', '짬뽕탕'],
-        imgPath: ['/image/나베전골.png' , '/image/짬뽕탕.png']
+        imgPath: ['https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EB%82%98%EB%B2%A0%EC%A0%84%EA%B3%A8.png' , 'https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EC%A7%AC%EB%BD%95%ED%83%95.png']
     },
     {
         options: ['두부조림', '간장계란조림'],
-        imgPath: ['/image/두부조림.png' , '/image/간장계란조림.png']
+        imgPath: ['https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EB%91%90%EB%B6%80%EC%A1%B0%EB%A6%BC.png' , 'https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EA%B0%84%EC%9E%A5%EA%B3%84%EB%9E%80%EC%A1%B0%EB%A6%BC.png']
     },
 ];
 
