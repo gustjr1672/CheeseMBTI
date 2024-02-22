@@ -88,13 +88,22 @@ export const questionList = [
 ]
 
 
+// export const resultList = {
+//     ESF:["얼큰한 국물, 고추장 베이스의 반찬, 고기파 밥상이 완성됐어요!!", '/깔끔한.png'],
+//     EST:["얼큰한 국물, 고추장 베이스의 반찬, 생선파 밥상이 완성됐어요!!", '/깔끔한.png'],
+//     ENF:["깔끔한 국물, 고추장 베이스의 반찬, 고기파 밥상이 완성됐어요!!", '/깔끔한.png'],
+//     ENT:["깔끔한 국물, 고추장 베이스의 반찬, 생선파 밥상이 완성됐어요!!", '/깔끔한.png'],
+//     ISF:["얼큰한 국물, 간장 베이스의 반찬, 고기파 밥상이 완성됐어요!!", '/image/임시사진.png'],
+//     IST:["얼큰한 국물, 간장 베이스의 반찬, 생선파 밥상이 완성됐어요!!",'/image/임시사진.png'],
+//     INF:["깔끔한 국물, 간장 베이스의 반찬, 고기파 밥상이 완성됐어요!!",'/image/임시사진.png'],
+//     INT:["깔끔한 국물, 간장 베이스의 반찬, 생선파 밥상이 완성됐어요!!",'/image/임시사진.png'],
+// }
+
 export const resultList = {
-    ESF:["얼큰한 국물, 고추장 베이스의 반찬, 고기파 밥상이 완성됐어요!!", '/image/임시사진2.png'],
-    EST:["얼큰한 국물, 고추장 베이스의 반찬, 생선파 밥상이 완성됐어요!!", '/image/임시사진2.png'],
-    ENF:["깔끔한 국물, 고추장 베이스의 반찬, 고기파 밥상이 완성됐어요!!", '/image/임시사진2.png'],
-    ENT:["깔끔한 국물, 고추장 베이스의 반찬, 생선파 밥상이 완성됐어요!!", '/image/임시사진2.png'],
-    ISF:["얼큰한 국물, 간장 베이스의 반찬, 고기파 밥상이 완성됐어요!!", '/image/임시사진.png'],
-    IST:["얼큰한 국물, 간장 베이스의 반찬, 생선파 밥상이 완성됐어요!!",'/image/임시사진.png'],
-    INF:["깔끔한 국물, 간장 베이스의 반찬, 고기파 밥상이 완성됐어요!!",'/image/임시사진.png'],
-    INT:["깔끔한 국물, 간장 베이스의 반찬, 생선파 밥상이 완성됐어요!!",'/image/임시사진.png'],
+    E: ["고추장 베이스의 반찬","https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EA%B3%A0%EC%B6%94%EC%9E%A5.png"],
+    I: ["간장 베이스의 반찬","https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EA%B0%84%EC%9E%A5.png"],
+    S: ["얼큰한 국물","https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EC%96%BC%ED%81%B0%ED%95%9C.png"],
+    N: ["깔끔한 국물","https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EA%B9%94%EB%81%94%ED%95%9C.png"],
+    F: ["고기파 밥상이 완성됐어요!!","https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EA%B3%A0%EA%B8%B0%ED%8C%8C.png"],
+    T: ["생선파 밥상이 완성됐어요!!","https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EC%83%9D%EC%84%A0%ED%8C%8C.png"],
 }
