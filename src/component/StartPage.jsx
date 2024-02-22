@@ -29,10 +29,9 @@ const Center = styled.div`
   bottom: 0;
 
   h1 {
-    font-size: 3em;
+    font-size: 3.8em;
     font-weight: 700;
     line-height: 150%;
-    font-family: GmarketSansBold;
     color: #67554e;
   }
 
@@ -49,7 +48,7 @@ const Center = styled.div`
 
 const TestLink = styled(Link)`
   background: #fff6d5;
-  font-family: inherit;
+  font-family: "mitme";
   padding: 0.6em 1.3em;
   font-weight: 900;
   font-size: 18px;

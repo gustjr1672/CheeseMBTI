@@ -42,12 +42,13 @@ body {
   background-size: 100% 30px;
   background-color: white;
 
-  font-family: "sagac";
+  font-family: "monggle";
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  font-family: "mitme";
 }
 
 button {
@@ -83,11 +84,11 @@ button:focus-visible {
 }
 
 @font-face {
-  font-family: "sagac";
-  src: url(fonts/사각사각.ttf);
+  font-family: "mitme";
+  src: url(https://foodtype.s3.ap-northeast-2.amazonaws.com/fonts/%EB%B0%91%EB%AF%B8.ttf);
 }
 
 @font-face {
   font-family: "monggle";
-  src: url(fonts/몽글몽글.ttf);
+  src: url(https://foodtype.s3.ap-northeast-2.amazonaws.com/fonts/%EB%AA%BD%EA%B8%80%EB%AA%BD%EA%B8%80.ttf);
 }

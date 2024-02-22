@@ -72,7 +72,7 @@ function Result(){
 export default Result;
 
 const Container = styled.div`
-font-family: "monggle";
+font-family: "mitme";
 p{
     margin:0px
 }
