@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState} from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+
 function Question({question, options, imgPath, addAnswer, deleteAnswer}){
     const [selectedOption, setSelectedOption] = useState('');
-    
+    const [questionNumber, setQuestionNumber] = useState(1);
+    const navigate = useNavigate();
+
     const handleNextQuestion = () =>{
         setSelectedOption('');
+        setQuestionNumber((questionNumber) => (questionNumber+1));
         if(selectedOption === '0'){
             addAnswer(question.A);
         }
@@ -13,14 +18,29 @@ function Question({question, options, imgPath, addAnswer, deleteAnswer}){
         }
     }
 
-    const handelBeforeQuestion = ()=>{
+    const handleBeforeQuestion = ()=>{
         setSelectedOption('');
         deleteAnswer();
+        if(questionNumber > 1){
+            setQuestionNumber((questionNumber) => (questionNumber-1));
+        }else{
+            navigate(-1);
+        }
     }
 
     const handleOptionChange = (e)=>{
         setSelectedOption(e.target.value);
     }
+
+    useEffect(()=>{
+        history.pushState(null,"",window.location.href);
+
+        window.addEventListener("popstate",handleBeforeQuestion);
+
+        return ()=>{
+            window.removeEventListener("popstate",handleBeforeQuestion);
+        }
+    },[questionNumber]);
 
     return(
         <>
@@ -49,7 +69,7 @@ function Question({question, options, imgPath, addAnswer, deleteAnswer}){
             </form>
 
         <Buttons>
-            <Button onClick={handelBeforeQuestion}>이전</Button>
+            <Button onClick={handleBeforeQuestion}>이전</Button>
             <Button onClick={handleNextQuestion}>다음</Button>
         </Buttons>
         
