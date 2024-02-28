@@ -1,39 +1,59 @@
+import 김치찌개 from './image/김치찌개.png'
+import 된장찌개 from './image/된장찌개.png'
+import 고등어무조림 from './image/고등어무조림.png'
+import 짜글이 from './image/짜글이.png'
+import 라면 from './image/라면.png'
+import 칼국수 from './image/칼국수.png'
+import 민어전 from './image/민어전.png'
+import 동그랑땡 from './image/동그랑땡.png'
+import 고등어회 from './image/고등어회.png'
+import 흑돼지구이 from './image/흑돼지구이.png'
+import 불고기 from './image/불고기.png'
+import 제육볶음 from './image/제육볶음.png'
+import 간장게장 from './image/간장게장.png'
+import 양념게장 from './image/양념게장.png'
+import 나베전골 from './image/나베전골.png'
+import 짬뽕탕 from './image/짬뽕탕.png'
+import 두부조림 from './image/두부조림.png'
+import 간장계란조림 from './image/간장계란조림.png'
+
+// B0%9C.png
 export const optionList = [
     {
         options: ['김치찌개', '된장찌개'],
-        imgPath: ['https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EA%B9%80%EC%B9%98%EC%B0%8C%EA%B0%9C.png' , 'https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EB%90%9C%EC%9E%A5%EC%B0%8C%EA%B0%9C.png']
+        imgPath: [ 김치찌개 , 된장찌개]
     },
     {
         options: ['고등어무조림', '짜글이'],
-        imgPath: ['https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EA%B3%A0%EB%93%B1%EC%96%B4%EB%AC%B4%EC%A1%B0%EB%A6%BC.png' , 'https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EC%A7%9C%EA%B8%80%EC%9D%B4.png']
+        imgPath: [ 고등어무조림, 짜글이]
     },
     {
         options: ['라면', '칼국수'],
-        imgPath: ['https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EB%9D%BC%EB%A9%B4.png' , 'https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EC%B9%BC%EA%B5%AD%EC%88%98.png']
+        imgPath: [라면,칼국수]
     },
     {
         options: ['민어전', '동그랑땡'],
-        imgPath: ['https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EB%AF%BC%EC%96%B4%EC%A0%84.png' , 'https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EB%8F%99%EA%B7%B8%EB%9E%91%EB%95%A1.png']
+        imgPath: [민어전 , 동그랑땡]
     },
     {
         options: ['고등어회', '흑돼지구이'],
-        imgPath: ['https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EA%B3%A0%EB%93%B1%EC%96%B4%ED%9A%8C.png' , 'https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%ED%9D%91%EB%8F%BC%EC%A7%80%EA%B5%AC%EC%9D%B4.png']
+        imgPath: [고등어회 , 흑돼지구이]
     },
     {
         options: ['불고기', '제육볶음'],
-        imgPath: ['https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EB%B6%88%EA%B3%A0%EA%B8%B0.png' , 'https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EC%A0%9C%EC%9C%A1%EB%B3%B6%EC%9D%8C.png']
+        imgPath: [불고기 , 제육볶음]
     },
     {
         options: ['간장게장.', '양념게장'],
-        imgPath: ['https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EA%B0%84%EC%9E%A5%EA%B2%8C%EC%9E%A5.png' , 'https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EC%96%91%EB%85%90%EA%B2%8C%EC%9E%A5.png']
+        imgPath: [간장게장 , 양념게장]
     },
     {
         options: ['나베전골', '짬뽕탕'],
-        imgPath: ['https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EB%82%98%EB%B2%A0%EC%A0%84%EA%B3%A8.png' , 'https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EC%A7%AC%EB%BD%95%ED%83%95.png']
+        imgPath: [나베전골 , 짬뽕탕]
     },
     {
         options: ['두부조림', '간장계란조림'],
-        imgPath: ['https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EB%91%90%EB%B6%80%EC%A1%B0%EB%A6%BC.png' , 'https://foodtype.s3.ap-northeast-2.amazonaws.com/image/%EA%B0%84%EC%9E%A5%EA%B3%84%EB%9E%80%EC%A1%B0%EB%A6%BC.png']
+        imgPath: [두부조림 , 간장계란조림]
     },
 ];
 
