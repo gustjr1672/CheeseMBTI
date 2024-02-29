@@ -1,13 +1,18 @@
 import styled from 'styled-components';
-import React from 'react';
+import React, { useEffect } from 'react';
 import {Link} from 'react-router-dom';
 
-function StartPage(){
+function StartPage({setPage}){
+    
+    useEffect(()=>{
+      setPage(0);
+    },[])
+
     return(
         <>
         <Center>
             <h1>한국인의<span><br/> 밥상 만들기 </span></h1>
-            {/* <img src="/image/main.png"/> */}
+          
             <TestLink to="./test">테스트 시작하기</TestLink>
         </Center>
         </>

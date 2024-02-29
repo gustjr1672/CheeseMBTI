@@ -80,6 +80,7 @@ function Result(){
                 </div>
             ))}
             </Container>
+            <ReStartButton onClick={handleGoBack}>다시 하기</ReStartButton>
         </StyleSheetManager>
         </>
     )
@@ -116,3 +117,28 @@ const StyledSpan = styled.span`
     color: ${({ ishighlighted }) => ishighlighted ? '#ff594d' : '#2d2d2d'};
     font-size: ${({ ishighlighted }) => ishighlighted ? '33px' : '25px'};
 `
+const ReStartButton = styled.button`
+  margin-top: 45px;
+  background: #ffd5d5;
+  font-family: "mitme";
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 18px;
+  border: 3px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+  &:hover{
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+  }
+  &:active{
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+  }
+  a{
+    color: #646cff
+  }
+  @media screen and (min-width: 769px) {
+    width: 150px;
+`;

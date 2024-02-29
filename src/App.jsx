@@ -30,7 +30,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<StartPage/>}/>
+          <Route path="/" element={<StartPage setPage={setPage}/>}/>
           <Route path="/result" element={<Result/>}/>
           <Route path="/loding" element={<Loding/>}/>
           <Route path="/test" 
