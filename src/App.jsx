@@ -38,6 +38,10 @@ function App() {
       return acc.concat(curr.imgPath);
     }, []);
 
+    const resultImages = Object.values(resultList).map(result => result[1]);
+
+    images.push(...resultImages);
+
     // 모든 이미지 preload 작업을 비동기적으로 수행합니다.
     Promise.all(images.map(imagePath => {
       return new Promise((resolve, reject) => {
