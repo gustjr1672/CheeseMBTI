@@ -4,6 +4,7 @@ import { useNavigate  } from "react-router-dom";
 import styled, { StyleSheetManager } from "styled-components";
 function Result(){
     const location = useLocation();
+    const navigate = useNavigate();
     const answers = location.state.answers;
     const resultList = location.state.resultList;
 
@@ -36,7 +37,26 @@ function Result(){
         setResultComments(resultComments);
         setResultImages(resultImages);
     },[])
-    
+
+    const handleGoBack =  ()=>{
+        const isConfirmed = window.confirm("다시 테스트하시겠습니까?");
+        if(isConfirmed){
+            navigate('/');
+        }
+        else{
+            history.pushState({answers,resultList}, "", window.location.href);
+        }
+        
+    }
+
+    useEffect(()=>{
+        history.pushState({answers,resultList}, "", window.location.href);
+        window.addEventListener('popstate',handleGoBack);
+
+        return ()=>{
+            window.removeEventListener('popstate',handleGoBack);
+        }
+    },[])
 
     return(
         <>
