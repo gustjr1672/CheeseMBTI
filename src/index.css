@@ -85,10 +85,12 @@ button:focus-visible {
 
 @font-face {
   font-family: "mitme";
-  src: url(https://foodtype.s3.ap-northeast-2.amazonaws.com/fonts/%EB%B0%91%EB%AF%B8.ttf);
+  src: url(/src/assets/fonts/밑미.ttf);
+  font-weight: 700;
 }
 
 @font-face {
   font-family: "monggle";
-  src: url(https://foodtype.s3.ap-northeast-2.amazonaws.com/fonts/%EB%AA%BD%EA%B8%80%EB%AA%BD%EA%B8%80.ttf);
+  src: url(/src/assets/fonts/몽글몽글.ttf);
+  font-weight: 700;
 }
